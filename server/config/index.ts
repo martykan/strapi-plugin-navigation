@@ -17,6 +17,7 @@ const config: StrapiConfig<NavigationPluginConfig> = {
     pruneObsoleteI18nNavigations: false,
     slugify: {},
     cascadeMenuAttached: true,
+    allowDuplicateRelations: false,
   },
 };
 

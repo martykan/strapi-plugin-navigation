@@ -20,6 +20,7 @@ export type NavigationPluginConfig = {
   slugify: Record<string, unknown>;
   pathDefaultFields: PluginConfigPathDefaultFields;
   cascadeMenuAttached: boolean;
+  allowDuplicateRelations: boolean;
 };
 
 export type StrapiConfig<T> = {

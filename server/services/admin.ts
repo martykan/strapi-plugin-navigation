@@ -45,6 +45,7 @@ const adminService: (context: StrapiContext) => IAdminService = ({ strapi }) => 
     const pathDefaultFields = config.pathDefaultFields;
     const allowedLevels = config.allowedLevels;
     const slugify = config.slugify;
+    const allowDuplicateRelations = config.allowDuplicateRelations;
     const isGQLPluginEnabled = !isNil(strapi.plugin('graphql'));
 
     let extendedResult: Record<string, unknown> = {
@@ -70,6 +71,7 @@ const adminService: (context: StrapiContext) => IAdminService = ({ strapi }) => 
       isGQLPluginEnabled: viaSettingsPage ? isGQLPluginEnabled : undefined,
       slugify,
       cascadeMenuAttached,
+      allowDuplicateRelations,
     };
     const i18nConfig = await addI18NConfigFields({ strapi, viaSettingsPage, previousConfig: {} });
 

@@ -237,6 +237,7 @@ const NavigationItemForm: React.FC<NavigationItemFormProps> = ({
   // TODO?: useMemo
   const relatedSelectOptions = sortBy(contentTypeEntities
     .filter((item) => {
+      if(config.allowDuplicateRelations) return true;
       const usedContentTypeEntitiesOfSameType = usedContentTypeEntities
         .filter(uctItem => relatedTypeSelectValue === uctItem.__collectionUid);
       return !find(usedContentTypeEntitiesOfSameType, uctItem => (item.id === uctItem.id && uctItem.id !== formik.values.related));

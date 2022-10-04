@@ -181,6 +181,7 @@ Config for this plugin is stored as a part of the `config/plugins.js` or `config
 - `i18nEnabled` - should you want to manage multi-locale content via navigation set this value `Enabled`. More **[ here ](#i18n-internationalization)**
 - `cascadeMenuAttached` - If you don't want "Menu attached" to cascade on child items set this value `Disabled`.
 - `slugify` - allows to extend configuration of our "slugging" solution of choice. To learn more visit the [documentation](https://github.com/sindresorhus/slugify#api). It can be left unset since it's optional. **This option can only be handled by configuration in config file**.
+- `allowDuplicateRelations` - Allow the same related item to be linked to multiple menu items.
 
 ### Properties
 
